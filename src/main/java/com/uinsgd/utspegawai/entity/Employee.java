@@ -39,8 +39,8 @@ public class Employee {
     @Column(name = "edept")
     private String empDept;
 
-    @Column(name = "esal")
-    private Double empSal;
+    @Column(name = "adress")
+    private String adress;
 
     @Column(name = "email")
     private String email;

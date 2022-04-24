@@ -13,30 +13,35 @@
             <li class="nav-item"><a class="nav-link"
                                     th:href="@{/employee/all}">Data</a></li>
             <li class="nav-item"><a class="nav-link"
-                                    th:href="@{/employee/show}">Register</a></li>
+                                    th:href="@{/employee/show}">Daftar</a></li>
         </ul>
     </nav>
     <div class="card">
         <div class="card-header bg-primary text-white text-center">
-            <h2>Employee Register Page</h2>
+            <h2>Edit Data Pegawai</h2>
         </div>
         <div class="card-body">
             <form method="post" th:action="@{/employee/update}"
                   th:object="${emp}">
-                Id : <input type="text" th:field="*{empId}" class="form-control"
-                            readonly> Name : <input type="text" th:field="*{empName}"
-                                                    class="form-control"> Sal : <input type="text"
-                                                                                       th:field="*{empSal}" class="form-control"> Gender : <input
-                    type="radio" value="male" th:field="*{empGen}">Male <input
-                    type="radio" value="female" th:field="*{empGen}">Female <br>
+                Id : <input type="text" th:field="*{empId}" class="form-control" readonly>
+                Nama Lengkap : <input type="text" th:field="*{empName}" class="form-control">
+                Jenis Kelamin : <input
+                    type="radio" value="Pria" th:field="*{empGen}">Pria <input
+                    type="radio" value="Wanita" th:field="*{empGen}">Wanita<br>
                 Email: <input type="text" th:field="*{email}" class="form-control">
-                Dept : <select class="form-control" th:field="*{empDept}">
+                Posisi : <select class="form-control" th:field="*{empDept}">
                 <option value="">-select-</option>
-                <option value="DEV">DEV</option>
-                <option value="QA">QA</option>
-                <option value="BA">BA</option>
-            </select> Doj : <input type="date" th:field="*{empDoj}" class="form-control" />
-                <input type="submit" value="register"
+                <option value="SD">Software Developer</option>
+                <option value="WD">Web Developer</option>
+                <option value="DA">Database Administrator</option>
+                <option value="HE">Hardware Engineer</option>
+                <option value="ISA">Information Security Analyst</option>
+                <option value="IS">IT Support</option>
+                <option value="SM">System Manager</option>
+
+            </select> Tanggal Lahir : <input type="date" th:field="*{empDoj}" class="form-control" />
+                Alamat : <input type="text" th:field="*{adress}" class="form-control">
+                <input type="submit" value="Submit"
                        class="btn btn-outline-success">
             </form>
         </div>
